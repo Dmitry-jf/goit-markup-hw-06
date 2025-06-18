@@ -22,13 +22,31 @@ address {
 
 img {
     display: block;
+
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
-    /* max-width: 320px; */
+    max-width: 320px;
     width: 100%;
     padding: 0 16px;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+
+    }
+
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
 }
 
 h1,
@@ -47,6 +65,10 @@ p {
     padding: 96px 0;
 }
 
+button {
+    cursor: pointer;
+}
+
 
 
 /* header */
@@ -60,6 +82,11 @@ p {
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    /* mobile */
+
+    
 }
 
 .header-nav {
@@ -68,10 +95,12 @@ p {
 }
 
 .navigation {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    display: none;
 }
+
+
+   
+
 
 .info {
     display: flex;
@@ -81,9 +110,10 @@ p {
 }
 
 .label {
-    padding: 24px 0;
-    margin-right: 76px;
+    padding: 16px 0;
+    display: block;
 }
+
 
 .nav-link {
     display: block;
@@ -108,6 +138,9 @@ p {
 
 .contacts {
     margin-left: auto;
+
+    /* mobile */
+        display: none;
 }
 
 .contacts-link {
@@ -125,6 +158,8 @@ p {
     line-height: 117%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    
 }
 
 .header-nav .second-part {
@@ -161,6 +196,18 @@ p {
     color: #404bbf;
 }
 
+.burger-btn { 
+ padding: 0;
+ border: none;
+ background-color: transparent; 
+ align-content: center; 
+ }
+
+.burger-icon {
+    /* display: block; */
+    fill: #2f2f37;
+    
+}
 /* Section-1 */
 
 .title {
@@ -173,7 +220,7 @@ p {
     margin: 0 auto;
     background-size: cover;
 
-    max-width: 1440px;
+    max-width: 320px;
     padding: 72px 0;
     
 
@@ -228,6 +275,9 @@ h1 {
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.04em;
+
+    max-width: 100%;
+        height: auto;
    
 }
 
@@ -893,31 +943,61 @@ h1 {
 
 
 
+/* Header adaptive */
+
 
 @media screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
-        padding: 0 16px;
-        
+    .burger-btn {
+            display: none;
+        }
+
+    .navigation {
+            display: flex;
+            align-items: center;
+            gap: 40px;
     }
+        .contacts {
+            font-style: normal;
+            display: block;
+     }
+
+         /* .label {
+             padding: 24px 0;
+             margin-right: 120px;
+         } */
+
+        
+}
+
+
+
+@media screen and (min-width: 1158px) {
+    .label {
+            margin-right: 76px;
+        }
+}
+
+
+
+
+
+
+
+/* Hero adaptive */
+
+/* @media screen and (min-width: 768px) {
     .title {
         max-width: 768px;
-        padding: 112px 0; 
+        padding: 112px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                    rgba(46, 47, 66, 0.7)),
-                url(../images/bg_hero.jpg);
+                rgba(46, 47, 66, 0.7)),
+            url(../images/bg_hero.jpg);
     }
 
     h1 {
         margin-bottom: 36px;
         max-width: 496px;
         font-size: 56px;
-        line-height: 107%; 
-    }
-}
-
-/* @media screen and (min-width: 1440px) {
-    .section {
-        padding: 120px 0;
+        line-height: 107%;
     }
 } */
