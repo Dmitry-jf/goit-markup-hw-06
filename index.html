@@ -66,16 +66,16 @@
 
     <main>
       <section class="title">
-        <!-- <div class="container">
+        <div class="container">
           <h1 class="title-text">Effective Solutions for Your Business</h1>
           <button type="button" class="title-but" data-modal-open>
             Order Service
           </button>
-        </div> -->
+        </div>
       </section>
 
       <section class="section description">
-        <!-- <div class="container">
+        <div class="container">
           <h2 class="visually-hidden">About</h2>
           <ul class="item-wrap">
             <li class="item-strategy">
@@ -127,16 +127,17 @@
               </p>
             </li>
           </ul>
-        </div> -->
+        </div>
       </section>
 
       <section class="section team">
-        <!-- <div class="container">
+        <div class="container">
           <h2 class="ourteam">Our Team</h2>
 
           <ul class="ourteam-list">
             <li class="teamlist">
               <img
+                srcset="./images/person1.jpg 1x, ./images/person1-x2.jpg 2x"
                 src="./images/person1.jpg"
                 width="264"
                 height="260"
@@ -181,6 +182,7 @@
             </li>
             <li class="teamlist">
               <img
+                srcset="./images/person2.jpg 1x, ./images/person2-x2.jpg 2x"
                 src="./images/person2.jpg"
                 width="264"
                 height="260"
@@ -225,6 +227,7 @@
             </li>
             <li class="teamlist">
               <img
+                srcset="./images/person3.jpg 1x, ./images/person3-x2.jpg 2x"
                 src="./images/person3.jpg"
                 width="264"
                 height="260"
@@ -269,6 +272,7 @@
             </li>
             <li class="teamlist">
               <img
+                srcset="./images/person4.jpg 1x, ./images/person4-x2.jpg 2x"
                 src="./images/person4.jpg"
                 width="264"
                 height="260"
@@ -312,21 +316,41 @@
               </div>
             </li>
           </ul>
-        </div> -->
+        </div>
       </section>
       <section class="section portfolio">
-        <!-- <div class="container">
+        <div class="container">
           <h2 class="item-portfolio">Our Portfolio</h2>
 
           <ul class="portfolio-list">
             <li class="app-portfolio">
               <div class="portfolio-img-wrap">
-                <img
-                  src="./images/img-1.jpg"
-                  width="360"
-                  height="300"
-                  alt="images-BankingApp"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                    ./images/img-1.jpg x1, ./images/img-1-x2.jpg x2"
+                  />
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+              ./images/img-1_tab.jpg 1x, ./images/img-1_tab-x2.jpg x2"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                  ./images/img-1_mob.jpg 1x, ./images/img-1_mob-x2.jpg x2"
+                  />
+
+                  <img
+                    src="./images/img-1.jpg"
+                    width="360"
+                    height="300"
+                    alt="images-BankingApp"
+                  />
+                </picture>
+
                 <p class="pop-up-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -434,7 +458,7 @@
               </div>
             </li>
           </ul>
-        </div> -->
+        </div>
       </section>
     </main>
 
